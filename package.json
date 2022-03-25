@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\" ",
+    "develop": "concurrently \"cd client && npm run dev\" \"cd server && npm run start\" ",
     "start": "npm run build && cd server && node server.js",
     "server": "cd server node server.js --ignore client",
     "build": "cd client && npm run build",
@@ -24,6 +24,8 @@
   "homepage": "https://github.com/nico-patano/TextEditor#readme",
   "dependencies": {
     "concurrently": "^7.0.0",
+    "express": "^4.17.3",
+    "if-env": "^1.0.4",
     "nodemon": "^2.0.15"
   }
 }
